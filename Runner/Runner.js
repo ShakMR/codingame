@@ -20,7 +20,8 @@ class Runner {
 
     const regex = new RegExp(/.*.js$/)
     this.codeFile = listOfFiles.filter(f => f.match(regex))[0];
-    this.runOutput = null;
+    this.runOutput = [];
+    this.outLine = 0;
   }
 
   async prepare() {
@@ -41,7 +42,8 @@ class Runner {
     this.oldLog = console.log;
     console.log = (...c) => {
       this.oldLog(...c);
-      this.runOutput = c;
+      this.runOutput.push(...c);
+      this.outLine++;
     }
 
     this.expectedOutLines = [];

@@ -4,8 +4,8 @@
   "description": "Repo for Codingame training",
   "main": "index.js",
   "scripts": {
-    "problem:run": "./executer.js",
-    "problem:create": "./problemSetup.js"
+    "problem:run": "node executer.js",
+    "problem:create": "node problemSetup.js"
   },
   "repository": {
     "type": "git",

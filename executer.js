@@ -3,7 +3,7 @@ const Executer = require('./Runner/Runner.js'); // this will create the helper f
 const { getArgvs } = require('./helpers');
 
 const main = async () => {
-  const [folderPath, testCase] = getArgvs(1);
+  const [folderPath, testCase = ''] = getArgvs(1);
 
   const runner = new Executer(folderPath, testCase);
 

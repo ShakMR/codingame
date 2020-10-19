@@ -36,4 +36,5 @@ for (let i = 0; i < H; i++){
     line += alphabet[charBetween(charCode, 'A', 'Z')? charCode : 91][i];
   }
   console.log(line);
+  
 }
